@@ -1,8 +1,8 @@
 import Image from "next/image";
 import QuantityPicker from "./QuantityPicker";
-import BtnPrimary from "./BtnPrimary";
 
-const ProductDetails = ({ text, img, title, description }) => {
+
+const ProductDetails = ({ img, title, description }) => {
   return (
     <section className="grid grid-cols-2 gap-6 max-w-[70rem] mx-auto mt-[2rem]">
       <div className="rounded-2xl overflow-hidden">
@@ -13,7 +13,6 @@ const ProductDetails = ({ text, img, title, description }) => {
         <p>{description}</p>
         <div>
           <QuantityPicker />
-          <BtnPrimary text={text} />
         </div>
       </div>
     </section>
