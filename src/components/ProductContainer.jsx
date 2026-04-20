@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ProductCard from "./ProductCard";
 
 const ProductContainer = () => {
@@ -18,9 +17,7 @@ const FetchProduct = async () => {
   return products.map((product) => {
     return (
       <div key={product.id}>
-        <Link href={`/detailview/${product.id}`}>
-          <ProductCard key={product.id} title={product.title} description={product.description} img={product.thumbnail} />
-        </Link>
+          <ProductCard id={product.id} title={product.title} description={product.description} img={product.thumbnail} />
       </div>
     );
   });
