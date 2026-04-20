@@ -1,11 +1,13 @@
 import ProductContainer from "../../components/ProductContainer";
 import Navigation from "@/components/Navigation";
+import CategoryList from "@/components/CategoryList";
 
-export default function Home() {
+export default function Home({ searchParams }) {
   return (
     <div>
       <Navigation />
-      <ProductContainer />
+      <CategoryList />
+      <ProductContainer searchParams={searchParams} />
     </div>
   );
 }
