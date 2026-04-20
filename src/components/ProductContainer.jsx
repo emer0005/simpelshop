@@ -1,23 +1,26 @@
 import ProductCard from "./ProductCard";
 
-const ProductContainer = () => {
+const ProductContainer = ({ searchParams }) => {
   return (
     <div>
-      <FetchProduct />
+      <FetchProduct searchParams={searchParams} />
     </div>
   );
 };
 
-const FetchProduct = async () => {
+const FetchProduct = async ({ searchParams }) => {
   "use server";
-  const response = await fetch("https://dummyjson.com/products");
+  const { category } = await searchParams;
+  const url = category ? `https://dummyjson.com/products/category/${category}?limit=100` : "https://dummyjson.com/products?limit=100";
+
+  const response = await fetch(url);
   const data = await response.json();
   const products = data.products;
 
   return products.map((product) => {
     return (
       <div key={product.id}>
-          <ProductCard id={product.id} title={product.title} description={product.description} img={product.thumbnail} />
+        <ProductCard id={product.id} title={product.title} description={product.description} img={product.thumbnail} price={product.price} />
       </div>
     );
   });

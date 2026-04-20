@@ -1,13 +1,19 @@
+import { Suspense } from "react";
+import CategoryElement from "./CategoryElement";
+
 const CategoryList = () => {
   return (
-    <div>
-      <button>Produkt</button>
-      <button>Produkt</button>
-      <button>Produkt</button>
-      <button>Produkt</button>
-      <button>Produkt</button>
-    </div>
+    <Suspense>
+      <FetchCategories />
+    </Suspense>
   );
+};
+
+const FetchCategories = async () => {
+  "use server";
+  const response = await fetch("https://dummyjson.com/products/category-list");
+  const categories = await response.json();
+  return categories.map((category, index) => <CategoryElement category={category} key={index} />);
 };
 
 export default CategoryList;
