@@ -1,5 +1,4 @@
-import Icon from "@/components/Icon";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 import ProductDetails from "@/components/ProductDetails";
 
 const detailview = async ({ params }) => {
@@ -11,9 +10,14 @@ const detailview = async ({ params }) => {
 
   return (
     <>
-      <Navigation />
-      <Icon />
-      <ProductDetails title={product.title} description={product.description} img={product.thumbnail} id={product.id} price={product.price} />
+      <Header />
+      <ProductDetails
+        title={product.title}
+        description={product.description}
+        img={product.thumbnail}
+        id={product.id}
+        price={product.price}
+      />
     </>
   );
 };

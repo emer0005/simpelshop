@@ -6,9 +6,9 @@ import Link from "next/link";
 const Icon = () => {
   return (
     <div className="flex gap-2">
-      <IoPerson className="text-gray-300" />
-      <IoMdHeart className="text-gray-300" />
-      <Link href="/payment"><IoCart className="text-gray-300" /></Link>
+      <IoPerson className="text-[#C5A582] text-xl" />
+      <IoMdHeart className="text-[#C5A582] text-xl" />
+      <Link href="/payment"><IoCart className="text-[#C5A582] text-xl" /></Link>
       
     </div>
   );

@@ -1,11 +1,5 @@
-import Navigation from "@/components/Navigation";
-import Icon from "@/components/Icon";
+import Header from "@/components/Header";
 
 export default function Home() {
-  return (
-    <div>
-      <Navigation />
-      <Icon />
-    </div>
-  );
+  return <Header />;
 }

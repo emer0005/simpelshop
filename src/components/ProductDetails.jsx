@@ -13,13 +13,13 @@ const ProductDetails = ({ img, title, description, id, price }) => {
       <div className="space-y-8 flex flex-col justify-center">
         <h1 className="text-2xl font-medium">{title}</h1>
         <p>{description}</p>
-        <div>
+        <div className="flex gap-2">
           <QuantityPicker />
           <button
             onClick={() => {
               setCart(id, title, price, img);
             }}
-            className="bg-red-200 px-4 py-1 cursor-pointer"
+            className="bg-[#C5A582] px-5 py-1 mt-2 text-white cursor-pointer"
           >
             Læg i kurv
           </button>

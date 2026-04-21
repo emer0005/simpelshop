@@ -3,9 +3,11 @@ import CategoryElement from "./CategoryElement";
 
 const CategoryList = () => {
   return (
+    <div className="flex flex-wrap gap-3 max-w-6xl mx-auto">
     <Suspense>
       <FetchCategories />
     </Suspense>
+    </div>
   );
 };
 
