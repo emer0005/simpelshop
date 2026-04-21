@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 
 const ProductContainer = ({ searchParams }) => {
   return (
-    <div>
+    <div className="grid grid-cols-3 max-w-6xl mx-auto">
       <FetchProduct searchParams={searchParams} />
     </div>
   );
