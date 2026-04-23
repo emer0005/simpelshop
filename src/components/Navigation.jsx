@@ -4,8 +4,12 @@ const Navigation = () => {
   return (
     <div>
       <ul className="flex gap-6 text-black text-xl font-semibold">
-        <Link href="/">Home</Link>
-        <Link href="/products">Product</Link>
+        <Link className="hover:underline" href="/">
+          Home
+        </Link>
+        <Link className="hover:underline" href="/products">
+          Product
+        </Link>
       </ul>
     </div>
   );

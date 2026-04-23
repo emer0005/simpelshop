@@ -19,7 +19,7 @@ const ProductDetails = ({ img, title, description, id, price }) => {
             onClick={() => {
               setCart(id, title, price, img);
             }}
-            className="bg-[#C5A582] px-5 py-1 mt-2 text-white cursor-pointer"
+            className="bg-[#C5A582] px-5 py-1 mt-2 text-white cursor-pointer hover:opacity-80"
           >
             Læg i kurv
           </button>
