@@ -5,13 +5,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Image
-        src="/hero.jpg"
-        alt="Hero image"
-        width={500}
-        height={500}
-        className="w-full h-full object-cover"
-      />
+      <Image src="/hero.jpg" alt="Hero image" width={500} height={500} className="w-full h-[720px] object-cover" />
     </div>
   );
 }

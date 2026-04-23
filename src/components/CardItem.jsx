@@ -6,13 +6,13 @@ import useCart from "@/store/cart";
 const CardItem = ({ price, title, img, id }) => {
   const { removeCart } = useCart();
   return (
-    <section className="relative grid grid-cols-4 items-center gap-4 p-4 rounded-lg max-w-md">
+    <section className="relative grid grid-cols-4 items-center gap-4 p-4 rounded-lg w-[600px] bg-gray-100 mb-5">
       <div className="w-20 h-20 rounded-2xl overflow-hidden">
         <Image src={img} alt="Produkt billede" className="w-full h-full object-cover" width={500} height={500} />
       </div>
 
-      <div className="flex flex-col justify-center w-full gap-2">
-        <h1 className="text-2xl font-Regular w-full block flex-grow">{title}</h1>
+      <div className="flex flex-col justify-center w-full gap-2 col-start-2 col-end-4">
+        <h1 className="text-xl font-Regular w-full block flex-grow">{title}</h1>
         <QuantityPicker />
       </div>
 
